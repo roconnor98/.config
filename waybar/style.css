@@ -1,0 +1,25 @@
+/* Make bar invisible */
+#waybar {
+   background: transparent;
+   font-family: "JetbrainsMono Nerd Font";
+}
+
+#workspaces,
+#clock,
+#audio {
+   margin: 5px 50px;
+   color: white;
+}
+
+#workspaces button {
+   color: white;
+   margin-left: 5px;
+}
+#workspaces button.active {
+    background-color: white;
+    color: black;
+ }
+
+#bluetooth {
+   margin-right: 20px;
+}

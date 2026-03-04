@@ -1,0 +1,50 @@
+{
+   "layer": "top",
+   "position": "bottom",
+   "modules-center": [
+      "hyprland/workspaces",
+      "clock",
+      "group/audio"
+   ],
+   "hyprland/workspaces": {
+      "format": "{name}:{icon}",
+      "format-icons": {
+	 "active": "",
+	 "default": ""
+      }
+   },
+   "group/audio": {
+      "orientation": "horizontal",
+      "modules": [
+	 "bluetooth",
+	 "pulseaudio"
+      ]
+   },
+   "pulseaudio": {
+      "tooltip": false,
+      "format": "{icon} {volume}%",
+      "format-icons": {
+	 "default": ["\uf026", "\uf027", "\uf028"]
+      },
+      "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "on-click-right": "pavucontrol",
+      "format-muted": "\uf00d {volume}%"
+   },
+   "clock": {
+      "tooltip": false,
+      "format": "{:%H:%M === %d-%B-%Y}"
+   },
+   "bluetooth": {
+      "tooltip": false,
+      "format": "󰂲",
+      "format-on": "{icon}",
+      "format-off": "{icon}", 
+      "format-connected":"{icon}",
+      "format-icons":{
+	 "on":"󰂯",
+	 "off": "󰂲",
+	 "connected": "󰂱"
+      },
+      "on-click": "blueman-manager"
+   }
+}
