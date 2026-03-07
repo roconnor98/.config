@@ -1,0 +1,13 @@
+configuration {
+   modi: "drun,run,filebrowser,window,ssh";
+   show-icons: true;
+   display-drun: " Apps";
+   display-run: " Run";
+   display-filebrowser: " Files";
+   display-window: " Windows";
+   display-ssh: " ssh" ;
+   drun-display-format: "{name}";
+   window-format: "{w} · {c} · {t}";
+}
+
+@theme "theme/theme.rasi"
