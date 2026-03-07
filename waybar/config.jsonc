@@ -32,7 +32,8 @@
    },
    "clock": {
       "tooltip": false,
-      "format": "{:%H:%M === %d-%B-%Y}"
+      "format": "{:%a %d %b %H:%M}",
+      "timezone": "IE"
    },
    "bluetooth": {
       "tooltip": false,
