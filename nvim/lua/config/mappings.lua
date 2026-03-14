@@ -4,10 +4,9 @@ vim.g.mapleader = ' '
 -- To back out to file view
 vim.keymap.set('n', '-', vim.cmd.Ex)
 
--- Telescope find files
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>=', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>g', builtin.live_grep, { desc = 'Telescope live grep' })
+-- Telescope
+vim.keymap.set('n', '<leader>=', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",  { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>g', "<cmd>lua require'telescope.builtin'.live_grep()<cr>", { desc = 'Telescope live grep' })
 
 -- Diagnostics
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Show line diagnostics' })
