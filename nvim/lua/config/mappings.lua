@@ -8,3 +8,6 @@ vim.keymap.set('n', '-', vim.cmd.Ex)
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>=', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>g', builtin.live_grep, { desc = 'Telescope live grep' })
+
+-- Diagnostics
+vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Show line diagnostics' })
