@@ -23,3 +23,7 @@ vim.keymap.set("n", "<C-s>", function() require('harpoon'):list():select(4) end)
 -- Toggle previous & next buffers stored within Harpoon list
 vim.keymap.set("n", "<C-S-P>", function() require('harpoon'):list():prev() end)
 vim.keymap.set("n", "<C-S-N>", function() require('harpoon'):list():next() end)
+
+-- lsp
+vim.keymap.set("n", "gd", function () vim.lsp.buf.hover() end)
+vim.keymap.set("n", "<leader>gd", function () vim.lsp.buf.definition() end)
