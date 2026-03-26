@@ -9,7 +9,7 @@ vim.keymap.set('n', '<leader>=', "<cmd>lua require'telescope.builtin'.find_files
 vim.keymap.set('n', '<leader>g', "<cmd>lua require'telescope.builtin'.live_grep()<cr>", { desc = 'Telescope live grep' })
 
 -- Diagnostics
-vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Show line diagnostics' })
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show line diagnostics' })
 
 -- Harpoon
 vim.keymap.set("n", "<leader>a", function() require('harpoon'):list():add() end)
@@ -26,4 +26,4 @@ vim.keymap.set("n", "<C-S-N>", function() require('harpoon'):list():next() end)
 
 -- lsp
 vim.keymap.set("n", "gd", function () vim.lsp.buf.hover() end)
-vim.keymap.set("n", "<leader>gd", function () vim.lsp.buf.definition() end)
+vim.keymap.set("n", "<leader>d", function () vim.lsp.buf.definition() end)
