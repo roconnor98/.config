@@ -13,16 +13,12 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show line 
 
 -- Harpoon
 vim.keymap.set("n", "<leader>a", function() require('harpoon'):list():add() end)
-vim.keymap.set("n", "<C-e>", function() require('harpoon').ui:toggle_quick_menu(require('harpoon'):list()) end)
+vim.keymap.set("n", "<M-e>", function() require('harpoon').ui:toggle_quick_menu(require('harpoon'):list()) end)
 
-vim.keymap.set("n", "<C-h>", function() require('harpoon'):list():select(1) end)
-vim.keymap.set("n", "<C-t>", function() require('harpoon'):list():select(2) end)
-vim.keymap.set("n", "<C-n>", function() require('harpoon'):list():select(3) end)
-vim.keymap.set("n", "<C-s>", function() require('harpoon'):list():select(4) end)
-
--- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set("n", "<C-S-P>", function() require('harpoon'):list():prev() end)
-vim.keymap.set("n", "<C-S-N>", function() require('harpoon'):list():next() end)
+vim.keymap.set("n", "<M-1>", function() require('harpoon'):list():select(1) end)
+vim.keymap.set("n", '<M-2>', function() require('harpoon'):list():select(2) end)
+vim.keymap.set("n", "<M-3>", function() require('harpoon'):list():select(3) end)
+vim.keymap.set("n", "<M-4>", function() require('harpoon'):list():select(4) end)
 
 -- lsp
 vim.keymap.set("n", "<leader>d", function () vim.lsp.buf.hover() end)
