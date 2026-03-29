@@ -3,7 +3,7 @@ return {
   -- The event that triggers the plugin
   event = "BufEnter *.md",
   -- The keys that trigger the plugin
-  keys = { "<leader>ww", "<leader>wt" },
+  keys = { "<leader>ww", "<leader>wt", "<leader>w<leader>w", "<leader>w<leader>i" },
   -- The configuration for the plugin
   init = function()
     vim.g.vimwiki_list = {
