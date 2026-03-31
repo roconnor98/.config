@@ -9,7 +9,18 @@ vim.keymap.set('n', '<leader>=', "<cmd>lua require'telescope.builtin'.find_files
 vim.keymap.set('n', '<leader>g', "<cmd>lua require'telescope.builtin'.live_grep()<cr>", { desc = 'Telescope live grep' })
 
 -- Diagnostics
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show line diagnostics' })
+vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float, { desc = 'View diagnostic message' })
+vim.keymap.set("n", "<leader>nd", vim.diagnostic.goto_next,{ desc = 'Next diagnostic message' }) 
+vim.keymap.set("n", "<leader>cd", function()
+  local diagnostics = vim.diagnostic.get(0, { lnum = vim.fn.line('.') - 1 })
+  if #diagnostics > 0 then
+    local message = diagnostics[1].message
+    vim.fn.setreg('+', message) -- Copy to system clipboard
+    print("Diagnostic message copied to clipboard!")
+  else
+    print("No diagnostic message found on this line.")
+  end
+end, { desc = "Copy diagnostic message" })
 
 -- Harpoon
 vim.keymap.set("n", "<leader>a", function() require('harpoon'):list():add() end)

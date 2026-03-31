@@ -19,3 +19,6 @@ vim.opt.shiftwidth = 3
 
 -- Clipboard copying
 vim.opt.clipboard = "unnamedplus"
+
+-- Remove Netrw banner
+vim.g.netrw_banner = 0
