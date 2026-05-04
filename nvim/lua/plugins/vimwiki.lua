@@ -8,9 +8,8 @@ return {
   init = function()
     vim.g.vimwiki_list = {
       {
-        -- Here will be the path for your wiki
         path = "~/vimwiki/",
-        -- The syntax for the wiki
+        diary_rel_path = "",
         syntax = "markdown",
         ext = "md",
       },
